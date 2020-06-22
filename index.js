@@ -19,7 +19,7 @@ function descendingOrder(n) {
   return parseInt(n.toString().split('').sort((a, b) => b - a).reduce((string, current) => string + current))
 }
 
-// 6Kyu - Write number in expanded form
+// 6kyu - Write number in expanded form
 function expandedForm(num) {
   const numArray = num.toString().split('')
   let numString = `${numArray[0]}${'0'.repeat(numArray.length - 1)}`
@@ -30,4 +30,24 @@ function expandedForm(num) {
   }
   return numString
 }
-expandedForm(70304)
+
+// 7kyu - String ends with?
+function solution(str, ending) {
+  return str.endsWith(ending)
+}
+solution('abcde', 'cde') // true
+solution('abcde', 'abc') // false
+
+// 7kyu - Compare x and o
+function XO(xsAndOs) {
+  xCount = xsAndOs.match(/x|X/)
+  yCount = xsAndOs.match(/y|Y/)
+  return xCount == yCount
+}
+
+// 7kyu - Number of people in the bus
+var number = function (busStops) {
+  return busStops.reduce((count, passengers) => {
+    return count + passengers[0] - passengers[1]
+  }, 0)
+}
