@@ -51,3 +51,18 @@ var number = function (busStops) {
     return count + passengers[0] - passengers[1]
   }, 0)
 }
+
+// 6kyu - Good vs Evil
+function goodVsEvil(good, evil) {
+  const goodValues = [1, 2, 3, 3, 4, 10]
+  const evilValues = [1, 2, 2, 2, 3, 5, 10]
+  const goodTotal = good.split(' ').reduce((sum, raceCount, i) => {
+    return sum + raceCount * goodValues[i]
+  }, 0)
+  const evilTotal = evil.split(' ').reduce((sum, raceCount, i) => {
+    return sum + raceCount * evilValues[i]
+  }, 0)
+  if (goodTotal < evilTotal) return "Battle Result: Evil eradicates all trace of Good";
+  else if (goodTotal > evilTotal) return "Battle Result: Good triumphs over Evil";
+  else return "Battle Result: No victor on this battle field";
+}
