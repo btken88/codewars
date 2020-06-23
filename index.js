@@ -66,3 +66,11 @@ function goodVsEvil(good, evil) {
   else if (goodTotal > evilTotal) return "Battle Result: Good triumphs over Evil";
   else return "Battle Result: No victor on this battle field";
 }
+
+// 7kyu - Get the Middle Character
+function getMiddle(s) {
+  if (s.length % 2 == 0) {
+    return s.slice((s.length / 2), (s.length / 2 + 2))
+  }
+  else return s.charAt(s.length / 2 - 1)
+}
