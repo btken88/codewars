@@ -74,3 +74,8 @@ function getMiddle(s) {
   }
   else return s.charAt(s.length / 2 - 1)
 }
+
+// 6kyu - Which are in?
+function inArray(array1, array2) {
+  return array1.filter(item => array2.some(el => el.includes(item))).sort()
+}
