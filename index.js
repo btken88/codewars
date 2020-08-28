@@ -79,3 +79,4 @@ function getMiddle(s) {
 function inArray(array1, array2) {
   return array1.filter(item => array2.some(el => el.includes(item))).sort()
 }
+
