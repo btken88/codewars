@@ -3,3 +3,5 @@ function simpleArraySum(ar) {
     return sum + current
   }, 0)
 }
+
+module.exports = simpleArraySum;
